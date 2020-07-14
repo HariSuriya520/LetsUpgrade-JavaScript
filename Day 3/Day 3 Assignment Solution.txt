@@ -1,0 +1,149 @@
+Question 1 :
+Explore and explain the various methods in console function Explain them:
+Answer:
+  The various methods in console functions where,
+  * console.assert()
+      Writes an error message to the console if the assertion is false
+  * console.clear()
+      Clears the console
+  * console.count()
+      Logs the number of times that this particular call to count() has been called
+  * console.error()
+      Outputs an error messege to the console
+  * console.group()
+      Creates a new inline group in the console. 
+      This indents following console messages by an additional level, until console.groupEnd() is called
+  * console.groupCollapsed()
+      Creates a new inline group in the console. However, the new group is created collapsed. 
+      The user will need to use the disclosure button to expand it
+  * console.groupEnd()
+      Exits the current inline group in the console
+  * console.info()
+      Outputs an informational message to the console
+  * console.log()
+      Outputs a message to the console
+  * console.table()
+      Displays tabular data as a table
+  * console.time()
+      Starts a timer (can track how long an operation takes)
+  * console.timeEnd()
+      Stops a timer that was previously started by console.time()
+  * console.trace()
+      Outputs a stack trace to the console
+  * console.warn()
+      Outputs a warning message to the console
+  
+--------------------------------------------------------------------------------------------------------
+
+Question 2 :
+Write the difference between var, let and const with code examples.
+Answer:
+  
+  Var:
+    The JavaScript variables statement is used to declare a variable and, optionally,
+    we can initialize the value of that variable.
+
+    Example: var a =10;
+
+      * Variable declarations are processed before the execution of the code.
+      * The scope of a JavaScript variable declared with var is its current execution context.
+      * The scope of a JavaScript variable declared outside the function is global.
+    Consider the following code snippet.
+
+        function nodeSimplified(){
+          var a =10;
+          console.log(a);  // output 10
+          if(true){
+            var a=20;
+            console.log(a); // output 20
+          }
+          console.log(a);  // output 20
+        }
+  
+  let:
+    The let statement declares a local variable in a block scope.
+    It is similar to var, in that we can optionally initialize the variable.
+
+    Example: let a =10;
+
+      * The let statement allows you to create a variable with the scope limited to the block on which it is used.
+      * It is similar to the variable we declare in other languages like Java, .NET, etc.
+    Consider the following code snippet.
+
+      function nodeSimplified(){
+        let a =10;
+        console.log(a);  // output 10
+        if(true){
+          let a=20;
+          console.log(a); // output 20
+        }
+        console.log(a);  // output 10
+      }
+
+  const:
+    const statement values can be assigned once and they cannot be reassigned.
+    The scope of const statement works similar to let statements.
+
+    Example: const a =10;
+
+    Consider the following code snippet.
+
+      function nodeSimplified(){
+        const MY_VARIABLE =10;
+        console.log(MY_VARIABLE);  //output 10 
+      }
+      
+--------------------------------------------------------------------------------------------------------
+
+Question 3 :
+Write a brief intro on available data types in Javascript.
+Answer:
+  In JavaScript there are two different kinds of data: primitives, and objects. 
+  A primitive is simply a data type that is not an object, and has no methods.
+  In JS, there are six primitive data types:
+    * Boolean
+    * Number
+    * String
+    * Null
+    * Undefined
+    * Symbol
+  Boolean:
+    A boolean represents only one of two values: true, or false. 
+    Think of a boolean as an on/off or a yes/no switch.
+
+      var boo1 = true;
+      var boo2 = false;
+
+  Number:
+    There is only one type of Number in JavaScript.
+    Numbers can be written with or without a decimal point. 
+    A number can also be +Infinity, -Infinity, and NaN (not a number).
+
+      var num1 = 32;
+      var num2 = +Infinity;
+
+  String:
+    Strings are used for storing text. 
+    Strings must be inside of either double or single quotes. 
+    In JS, Strings are immutable (they cannot be changed).
+
+      var str1 = 'hello, it is me';
+      var str2 = "hello, it's me";
+
+  Null:
+    Null has one value: null. It is explicitly nothing.
+    
+      var nothing = null;
+
+  Undefined:
+    A variable that has no value is undefined.
+
+      var testVar;
+      console.log(testVar); // undefined
+
+  Symbol:
+    Symbols are new in ES6. 
+    A Symbol is an immutable primitive value that is unique. 
+    For the sake of brevity, that is the extent that this article will cover Symbols.
+
+      const mySymbol = Symbol('mySymbol');
