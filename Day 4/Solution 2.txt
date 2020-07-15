@@ -1,0 +1,68 @@
+Question 2:
+    Explain with examples the remaining methods of String and Array
+        JavaScript Strings
+
+            charAt()
+            charCodeAt()
+            concat()
+            constructor
+            endsWith()
+            fromCharCode()
+            includes()
+            indexOf()
+            lastIndexOf()
+            length
+            localeCompare()
+            match()
+            prototype
+            repeat()
+            replace()
+            search()
+            slice()
+            split()
+            startsWith()
+            substr()
+            substring()
+            toLocaleLowerCase()
+            toLocaleUpperCase()
+            toLowerCase()
+            toString()
+            toUpperCase()
+            trim()
+            valueOf()
+
+        JavaScript Array:
+        
+            concat()
+            constructor
+            copyWithin()
+            entries()
+            every()
+            fill()
+            filter()
+            find()
+            findIndex()
+            forEach()
+            from()
+            includes()
+            indexOf()
+            isArray()
+            join()
+            keys()
+            length
+            lastIndexOf()
+            map()
+            pop()
+            prototype
+            push()
+            reduce()
+            reduceRight()
+            reverse()
+            shift()
+            slice()
+            some()
+            sort()
+            splice()
+            toString()
+            unshift()
+            valueOf()
