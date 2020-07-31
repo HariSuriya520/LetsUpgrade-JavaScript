@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Project - Hari Hara Sudhan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+	body{
+		background-color: black;
+		color: white;
+		font-family: monospace;
+	}
+	.heading{
+		text-align: center;
+		margin: 75px 0;
+	}
+	.main{
+		margin: 0 10%;
+	}
+	.author{
+		text-align: right;
+
+	}
+	.random{
+		text-align: center;
+		margin: 75px 25%;
+		padding: 20px 0;
+		border: 1px solid white;
+		border-radius: 10px;
+	}
+	.random:hover{
+		background-color: white;
+		color: black;
+	}
+	#quotes,#author{
+		opacity: 0;
+		transition: opacity 1s;
+	}
+
+</style>
+<body>
+	<main class="main">
+		<h1 class="heading">Quotes</h1>
+		<h2 class="quotes" id="quotes"></h2>
+		<h3 class="author" id="author"></h3>
+		<h2 class="random" id="random" onclick="window.location.reload()"><span class="glyphicon glyphicon-refresh"></span> Generate Random</h2>
+	</main>
+		
+	<script>
+		window.onload=()=>{
+			load();
+		}
+
+		function load(){
+			var quotes = document.getElementById('quotes');
+			var author = document.getElementById('author');
+
+			var quotesArray = [
+				'\“All our dreams can come true, if we have the courage to pursue them.\”',
+				'\“The secret of getting ahead is getting started.\”',
+				'\“Only the paranoid survive.\”',
+				'“It’s hard to beat a person who never gives up.”'
+			]
+			var authorArray = [
+				"-Walt Disney",
+				"–Mark Twain",
+				'–Andy Grove',
+				'–Babe Ruth'
+			]
+
+			var rand = Math.floor(Math.random()*quotesArray.length);
+
+			quotes.innerHTML = quotesArray[rand];
+			author.innerHTML = authorArray[rand];
+			quotes.style.opacity='1';
+			author.style.opacity='1';
+		}
+	</script>
+</body>
+</html>
